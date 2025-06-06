@@ -1,0 +1,68 @@
+.navbar {
+  background-color: #fdfdfb;
+  border-bottom: 1px solid #ddd;
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #d17e00;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #d17e00;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.6em;
+  cursor: pointer;
+}
+
+/* Mobil uyumlu */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #fdfdfb;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    display: none;
+    box-shadow: -2px 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
