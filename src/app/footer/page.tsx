@@ -1,4 +1,4 @@
-import Image from "next/image";
+"use client";
 import "./footer.css"
 export default function footer() {
   return (
