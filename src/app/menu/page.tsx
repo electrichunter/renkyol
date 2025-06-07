@@ -7,12 +7,12 @@ export default function Home() {
     <>
       <header className="navbar">
         <div className="container">
-          <div className="logo">RenkYol</div>
+          <a href='/'><div className="logo">RenkYol</div></a>
           <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-            <a href="#hakkimizda">Hakkımızda</a>
-            <a href="#hizmetler">Hizmetler</a>
-            <a href="#galeri">Galeri</a>
-            <a href="#iletisim">İletişim</a>
+            <a href="aboutus">Hakkımızda</a>
+            <a href="hizmetler">Hizmetler</a>
+            <a href="galeri">Galeri</a>
+            <a href="iletisim">İletişim</a>
           </nav>
           <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
             ☰

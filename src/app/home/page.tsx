@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <div className="hero">
+      <div className="hero py-16 bg-gradient-to-r from-blue-500 to-purple-600 text-white flex items-center justify-between px-10">
         <div className="text">
           <h1>Evinize Renk Katalım</h1>
           <p>Ücretsiz fiyat teklifi almak için şimdi bizimle iletişime geçin.</p>
@@ -16,17 +16,55 @@ export default function Home() {
 
       </div>
 
-      {/* Gallery / Son Çalışmalarımız */}
-      <div className="gallery">
-        <div>Çalışma 1</div>
-        <div>Çalışma 2</div>
-        <div>Çalışma 3</div>
-        <div>Çalışma 4</div>
-      </div>
+
+{/* Sonsuz Kayar Galeri */}
+
+<section className="overflow-hidden py-10 bg-white">
+  <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">Son Çalışmalarımız</h2>
+
+  <div className="relative overflow-hidden mx-auto w-[80%]">
+    <div className="flex animate-marquee gap-[2vh]">
+      {[1, 2].map((loop) => (
+        <div className="flex gap-[2vh]" key={loop}>
+          {["c1.jpg", "c2.jpg", "c3.jpg", "c4.jpg", "c5.jpg", "c6.jpg", "c7.jpg", "c8.jpg"].map((img, index) => (
+            <div
+              key={`${loop}-${index}`}
+              className="w-64 h-40 min-w-[16rem] rounded-xl overflow-hidden shadow"
+            >
+              <Image
+                src={`/${img}`}
+                alt={`Çalışma ${index + 1}`}
+                width={256}
+                height={160}
+                className=" "
+              />
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* İç Mekan Boyama Bölümü */}
       <div className="section">
-        <div className="image"></div>
+        <div className="image"> 
+      <div className="relative w-full h-80 rounded-lg overflow-hidden">
+      <Image
+        src="/usta.png"
+        alt="Usta Çalışması"
+        fill
+        className="object-cover"
+      />
+    </div>
+
+
+        </div>
+
+
+
+
         <div className="text">
           <h2>İç Mekan Boyama</h2>
           <p>
@@ -38,19 +76,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Alçı Uygulama Bölümü */}
-      <div className="section reverse">
-        <div className="image"></div>
-        <div className="text">
-          <h2>Alçı Uygulama</h2>
-          <p>
-            Boyama işlemine başlamadan önce, yüzeylerin kusursuz olması gerekir.
-            Alçı uygulamamız; çatlakların onarımı, yüzey düzgünleştirme ve boya
-            öncesi hazırlık aşamalarını kapsar. Pürüzsüz ve kaliteli bir boya
-            sonucu için uzman alçı ekibimizle çalışın.
-          </p>
-        </div>
-      </div>
+       
+ 
     </div>
   );
 }
