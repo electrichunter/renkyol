@@ -9,9 +9,9 @@ export default function Home() {
         <div className="container">
           <a href='/'><div className="logo">RenkYol</div></a>
           <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
+              <a href="/">Ana Sayfa</a>
             <a href="aboutus">Hakkımızda</a>
-            <a href="hizmetler">Hizmetler</a>
-            <a href="galeri">Galeri</a>
+ 
             <a href="iletisim">İletişim</a>
           </nav>
           <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
