@@ -11,9 +11,10 @@ export default function Home() {
           <p>Ücretsiz fiyat teklifi almak için şimdi bizimle iletişime geçin.</p>
           <button>WhatsApp'tan Ulaş</button>
         </div>
-<div className="image">
+<div className="image" style={{ position: 'relative', width: '400px', height: '300px' }}>
   <Image src="/renkyol.png" alt="RenkYol" fill style={{ objectFit: 'cover' }} />
 </div>
+
 
       </div>
 
@@ -51,14 +52,15 @@ export default function Home() {
       {/* İç Mekan Boyama Bölümü */}
       <div className="section">
         <div className="image"> 
-      <div className="relative w-full h-80 rounded-lg overflow-hidden">
-      <Image
-        src="/usta.png"
-        alt="Usta Çalışması"
-        fill
-        className="object-cover"
-      />
-    </div>
+  <div className="relative w-full h-[50vh] rounded-lg overflow-hidden">
+  <Image
+    src="/usta.png"
+    alt="Usta Çalışması"
+    fill
+    className="object-cover"
+  />
+</div>
+
 
 
         </div>
