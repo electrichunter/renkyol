@@ -1,18 +1,28 @@
- "use client";
-import React, { useState } from "react"; 
-import "./menu.css"; // Import your CSS file for styling
+"use client";
+import React, { useState } from "react";
+import Link from "next/link";
+import "./menu.css";
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
       <header className="navbar">
         <div className="container">
-          <a href='/'><div className="logo">RenkYol</div></a>
+          <Link href="/" className="logo">
+            RenkYol
+          </Link>
           <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-              <a href="/">Ana Sayfa</a>
-            <a href="aboutus">Hakkımızda</a>
- 
-            <a href="iletisim">İletişim</a>
+            <Link href="/" className="nav-link">
+              Ana Sayfa
+            </Link>
+            <Link href="/aboutus" className="nav-link">
+              Hakkımızda
+            </Link>
+            <Link href="/iletisim" className="nav-link">
+              İletişim
+            </Link>
           </nav>
           <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
             ☰

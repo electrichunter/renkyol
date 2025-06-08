@@ -9,9 +9,10 @@ export default function Home() {
         <div className="text">
           <h1>Evinize Renk Katalım</h1>
           <p>Ücretsiz fiyat teklifi almak için şimdi bizimle iletişime geçin.</p>
-          <button>WhatsApp'tan Ulaş</button>
+        <button>WhatsApp&apos;tan Ulaş</button> {/* ' ifadesi bquild de hata veriyor  */}
+
         </div>
-<div className="image" style={{ position: 'relative', width: '400px', height: '300px' }}>
+<div className="image" style={{ position: 'relative', width: '400px', height: '430px' }}>
   <Image src="/renkyol.png" alt="RenkYol" fill style={{ objectFit: 'cover' }} />
 </div>
 
