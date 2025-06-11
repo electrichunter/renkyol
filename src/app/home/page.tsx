@@ -20,7 +20,8 @@ export default function Home() {
           <h1>Evinize Renk Katalım</h1>
           <p>Ücretsiz fiyat teklifi almak için şimdi bizimle iletişime geçin.</p>
           {/* Butona onClick ekledik */}
-        <button onClick={handleClick}>WhatsApp&apos;tan Ulaş</button>
+    <button onClick={handleClick}>WhatsApp&apos;tan Ulaş</button>
+
 
         </div>
         <div className="image" style={{ position: 'relative', width: '400px', height: '430px' }}>
